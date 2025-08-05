@@ -47,7 +47,7 @@ namespace ADONetDemo
             {
                 while (reader.Read())
                 {
-                    Console.WriteLine(reader[0] + " " + reader[1] + " " + reader[2]);
+                    Console.WriteLine(reader["rn"] + " " + reader["name"] + " " + reader[2]);
                 }
                 reader.Close();
                 connection.Close();

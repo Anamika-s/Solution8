@@ -1,0 +1,28 @@
+﻿create database Demo
+use Demo
+
+create table student(rn int primary key identity,
+name varchar(20) not null,
+address varchar(50) not null,
+marks int)
+
+select * from student
+
+create proc GetStudents
+AS
+   select * from student
+
+create proc AddStudent(@name varchar(20), @address varchar(20), @marks int)
+AS
+ insert into student(name, address, marks) values (@name, @address, @marks )
+
+
+ create proc EditStudent(@rn int, @address varchar(20), @marks int)
+AS
+update student set address =@address, marks = @marks where rn = @rn
+
+
+
+ create proc deleteStudent(@rn int)
+AS
+delete student where rn = @rn

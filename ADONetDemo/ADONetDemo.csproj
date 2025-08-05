@@ -5,7 +5,16 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>ADONetDemo.Program2</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="script.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="script.txt" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
